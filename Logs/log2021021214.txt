@@ -1,0 +1,336 @@
+2021-02-12 14:27:42.654 +07:00 [INF] Start
+2021-02-12 14:28:28.158 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/product/add application/json 375
+2021-02-12 14:28:28.180 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:28:28.216 +07:00 [INF] Route matched with {action = "AddProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProduct(DemoStandardProject.DTOs.AddProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:28:28.732 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:28:29.147 +07:00 [INF] Executed DbCommand (33ms) [Parameters=[@__newProduct_ProductGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__newProduct_ProductGroupId_0
+2021-02-12 14:28:29.212 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__newProduct_PromotionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PromotionId], [p].[DateFrom], [p].[Detail], [p].[Discount], [p].[IsActice], [p].[dateTo]
+FROM [Promotions] AS [p]
+WHERE [p].[PromotionId] = @__newProduct_PromotionId_0
+2021-02-12 14:28:29.334 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([CreatedDate], [Discount], [IsActice], [Price], [ProductCode], [ProductDetail], [ProductGroupId], [PromotionId], [Stock], [UpdateDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ProductId]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ProductId] = scope_identity();
+2021-02-12 14:28:29.377 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate]
+FROM [Product] AS [p]
+2021-02-12 14:28:29.386 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:28:29.397 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject) in 1178.2144ms
+2021-02-12 14:28:29.398 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:28:29.402 +07:00 [INF] Request finished in 1247.1181ms 200 application/json; charset=utf-8
+2021-02-12 14:29:05.044 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/product/add application/json 381
+2021-02-12 14:29:05.046 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:05.047 +07:00 [INF] Route matched with {action = "AddProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProduct(DemoStandardProject.DTOs.AddProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:29:05.068 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:29:05.072 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__newProduct_ProductGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__newProduct_ProductGroupId_0
+2021-02-12 14:29:05.073 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__newProduct_PromotionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PromotionId], [p].[DateFrom], [p].[Detail], [p].[Discount], [p].[IsActice], [p].[dateTo]
+FROM [Promotions] AS [p]
+WHERE [p].[PromotionId] = @__newProduct_PromotionId_0
+2021-02-12 14:29:05.076 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([CreatedDate], [Discount], [IsActice], [Price], [ProductCode], [ProductDetail], [ProductGroupId], [PromotionId], [Stock], [UpdateDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ProductId]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ProductId] = scope_identity();
+2021-02-12 14:29:05.083 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate]
+FROM [Product] AS [p]
+2021-02-12 14:29:05.084 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:29:05.085 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject) in 37.952ms
+2021-02-12 14:29:05.085 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:05.085 +07:00 [INF] Request finished in 40.9251ms 200 application/json; charset=utf-8
+2021-02-12 14:29:25.209 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/product/add application/json 374
+2021-02-12 14:29:25.209 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:25.210 +07:00 [INF] Route matched with {action = "AddProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProduct(DemoStandardProject.DTOs.AddProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:29:25.218 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:29:25.222 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__newProduct_ProductGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__newProduct_ProductGroupId_0
+2021-02-12 14:29:25.223 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__newProduct_PromotionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PromotionId], [p].[DateFrom], [p].[Detail], [p].[Discount], [p].[IsActice], [p].[dateTo]
+FROM [Promotions] AS [p]
+WHERE [p].[PromotionId] = @__newProduct_PromotionId_0
+2021-02-12 14:29:25.227 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([CreatedDate], [Discount], [IsActice], [Price], [ProductCode], [ProductDetail], [ProductGroupId], [PromotionId], [Stock], [UpdateDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ProductId]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ProductId] = scope_identity();
+2021-02-12 14:29:25.234 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate]
+FROM [Product] AS [p]
+2021-02-12 14:29:25.234 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:29:25.235 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject) in 24.4824ms
+2021-02-12 14:29:25.235 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:25.235 +07:00 [INF] Request finished in 26.4494ms 200 application/json; charset=utf-8
+2021-02-12 14:29:49.550 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/product/add application/json 359
+2021-02-12 14:29:49.551 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:49.551 +07:00 [INF] Route matched with {action = "AddProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProduct(DemoStandardProject.DTOs.AddProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:29:49.553 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:29:49.554 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__newProduct_ProductGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__newProduct_ProductGroupId_0
+2021-02-12 14:29:49.555 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__newProduct_PromotionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PromotionId], [p].[DateFrom], [p].[Detail], [p].[Discount], [p].[IsActice], [p].[dateTo]
+FROM [Promotions] AS [p]
+WHERE [p].[PromotionId] = @__newProduct_PromotionId_0
+2021-02-12 14:29:49.557 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([CreatedDate], [Discount], [IsActice], [Price], [ProductCode], [ProductDetail], [ProductGroupId], [PromotionId], [Stock], [UpdateDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ProductId]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ProductId] = scope_identity();
+2021-02-12 14:29:49.563 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate]
+FROM [Product] AS [p]
+2021-02-12 14:29:49.564 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:29:49.564 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject) in 13.3578ms
+2021-02-12 14:29:49.564 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:29:49.565 +07:00 [INF] Request finished in 14.5565ms 200 application/json; charset=utf-8
+2021-02-12 14:30:25.466 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/product/add application/json 279
+2021-02-12 14:30:25.466 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:30:25.466 +07:00 [INF] Route matched with {action = "AddProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProduct(DemoStandardProject.DTOs.AddProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:30:25.468 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:30:25.470 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__newProduct_ProductGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__newProduct_ProductGroupId_0
+2021-02-12 14:30:25.471 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__newProduct_PromotionId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PromotionId], [p].[DateFrom], [p].[Detail], [p].[Discount], [p].[IsActice], [p].[dateTo]
+FROM [Promotions] AS [p]
+WHERE [p].[PromotionId] = @__newProduct_PromotionId_0
+2021-02-12 14:30:25.474 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([CreatedDate], [Discount], [IsActice], [Price], [ProductCode], [ProductDetail], [ProductGroupId], [PromotionId], [Stock], [UpdateDate])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+SELECT [ProductId]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [ProductId] = scope_identity();
+2021-02-12 14:30:25.480 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate]
+FROM [Product] AS [p]
+2021-02-12 14:30:25.480 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:30:25.481 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject) in 14.6786ms
+2021-02-12 14:30:25.481 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.AddProduct (DemoStandardProject)'
+2021-02-12 14:30:25.481 +07:00 [INF] Request finished in 15.7946ms 200 application/json; charset=utf-8
+2021-02-12 14:30:45.566 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/product/all  
+2021-02-12 14:30:45.567 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:30:45.570 +07:00 [INF] Route matched with {action = "GetProductAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductAll() on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:30:45.572 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:30:45.608 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+2021-02-12 14:30:45.623 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:30:45.623 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject) in 53.3011ms
+2021-02-12 14:30:45.623 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:30:45.623 +07:00 [INF] Request finished in 57.2736ms 200 application/json; charset=utf-8
+2021-02-12 14:31:19.801 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/productgroup/all  
+2021-02-12 14:31:19.802 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject)'
+2021-02-12 14:31:19.807 +07:00 [INF] Route matched with {action = "GetAll", controller = "ProductGroup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller DemoStandardProject.Controllers.Product.ProductGroupController (DemoStandardProject).
+2021-02-12 14:31:19.809 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:31:19.814 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+2021-02-12 14:31:19.819 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductGroupDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:31:19.821 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject) in 14.4606ms
+2021-02-12 14:31:19.822 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject)'
+2021-02-12 14:31:19.822 +07:00 [INF] Request finished in 20.3463ms 200 application/json; charset=utf-8
+2021-02-12 14:31:34.169 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:6001/api/productgroup/delect/4  
+2021-02-12 14:31:34.170 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.DelectProductGroup (DemoStandardProject)'
+2021-02-12 14:31:34.173 +07:00 [INF] Route matched with {action = "DelectProductGroup", controller = "ProductGroup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DelectProductGroup(Int32) on controller DemoStandardProject.Controllers.Product.ProductGroupController (DemoStandardProject).
+2021-02-12 14:31:34.176 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:31:34.182 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+WHERE [p].[ProductGroupId] = @__Id_0
+2021-02-12 14:31:34.196 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ProductGroup]
+WHERE [ProductGroupId] = @p0;
+SELECT @@ROWCOUNT;
+2021-02-12 14:31:34.204 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+2021-02-12 14:31:34.206 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductGroupDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:31:34.207 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductGroupController.DelectProductGroup (DemoStandardProject) in 33.7191ms
+2021-02-12 14:31:34.207 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.DelectProductGroup (DemoStandardProject)'
+2021-02-12 14:31:34.207 +07:00 [INF] Request finished in 38.4129ms 200 application/json; charset=utf-8
+2021-02-12 14:31:46.545 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:6001/api/productgroup/add application/json 37
+2021-02-12 14:31:46.546 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.AddProductGroup (DemoStandardProject)'
+2021-02-12 14:31:46.549 +07:00 [INF] Route matched with {action = "AddProductGroup", controller = "ProductGroup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddProductGroup(DemoStandardProject.DTOs.AddProductGroupDto) on controller DemoStandardProject.Controllers.Product.ProductGroupController (DemoStandardProject).
+2021-02-12 14:31:46.557 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:31:46.561 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Boolean), @p2='?' (Size = 255), @p3='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ProductGroup] ([CreatedDate], [IsActice], [ProductGroupDetail], [UpdatedDate])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [ProductGroupId]
+FROM [ProductGroup]
+WHERE @@ROWCOUNT = 1 AND [ProductGroupId] = scope_identity();
+2021-02-12 14:31:46.570 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+2021-02-12 14:31:46.571 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductGroupDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:31:46.571 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductGroupController.AddProductGroup (DemoStandardProject) in 22.1698ms
+2021-02-12 14:31:46.571 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.AddProductGroup (DemoStandardProject)'
+2021-02-12 14:31:46.572 +07:00 [INF] Request finished in 26.1684ms 200 application/json; charset=utf-8
+2021-02-12 14:31:51.822 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/productgroup/all  
+2021-02-12 14:31:51.823 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject)'
+2021-02-12 14:31:51.823 +07:00 [INF] Route matched with {action = "GetAll", controller = "ProductGroup"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller DemoStandardProject.Controllers.Product.ProductGroupController (DemoStandardProject).
+2021-02-12 14:31:51.824 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:31:51.826 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductGroupId], [p].[CreatedDate], [p].[IsActice], [p].[ProductGroupDetail], [p].[UpdatedDate]
+FROM [ProductGroup] AS [p]
+2021-02-12 14:31:51.827 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductGroupDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:31:51.827 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject) in 4.1075ms
+2021-02-12 14:31:51.827 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductGroupController.GetAll (DemoStandardProject)'
+2021-02-12 14:31:51.828 +07:00 [INF] Request finished in 5.1834ms 200 application/json; charset=utf-8
+2021-02-12 14:32:08.269 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/product/all  
+2021-02-12 14:32:08.269 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:32:08.269 +07:00 [INF] Route matched with {action = "GetProductAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductAll() on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:32:08.270 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:32:08.275 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+2021-02-12 14:32:08.278 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:32:08.279 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject) in 9.8048ms
+2021-02-12 14:32:08.280 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:32:08.280 +07:00 [INF] Request finished in 10.9486ms 200 application/json; charset=utf-8
+2021-02-12 14:33:03.846 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:6001/api/product/update application/json 282
+2021-02-12 14:33:03.846 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:03.851 +07:00 [INF] Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(DemoStandardProject.DTOs.UpdateProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:33:03.856 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:33:03.867 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__updateProduct_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+WHERE [p].[ProductId] = @__updateProduct_ProductId_0
+2021-02-12 14:33:03.882 +07:00 [ERR] Failed executing DbCommand (7ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CreatedDate] = @p0, [Discount] = @p1, [IsActice] = @p2, [Price] = @p3, [ProductCode] = @p4, [ProductDetail] = @p5, [ProductGroupId] = @p6, [PromotionId] = @p7, [Stock] = @p8, [UpdateDate] = @p9
+WHERE [ProductId] = @p10;
+SELECT @@ROWCOUNT;
+2021-02-12 14:33:03.902 +07:00 [ERR] An exception occurred in the database while saving changes for context type 'DemoStandardProject.Data.AppDBContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Product_ProductGroup_ProductGroupId". The conflict occurred in database "ShoppingOnline", table "dbo.ProductGroup", column 'ProductGroupId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8e2f95d8-4361-4b1e-bee3-a5f68d025c8f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The UPDATE statement conflicted with the FOREIGN KEY constraint "FK_Product_ProductGroup_ProductGroupId". The conflict occurred in database "ShoppingOnline", table "dbo.ProductGroup", column 'ProductGroupId'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:8e2f95d8-4361-4b1e-bee3-a5f68d025c8f
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2021-02-12 14:33:03.903 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 14:33:03.904 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject) in 53.6046ms
+2021-02-12 14:33:03.904 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:03.904 +07:00 [INF] Request finished in 58.5623ms 404 application/json; charset=utf-8
+2021-02-12 14:33:17.943 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:6001/api/product/update application/json 281
+2021-02-12 14:33:17.943 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:17.943 +07:00 [INF] Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(DemoStandardProject.DTOs.UpdateProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:33:17.944 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:33:17.947 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__updateProduct_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+WHERE [p].[ProductId] = @__updateProduct_ProductId_0
+2021-02-12 14:33:17.951 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CreatedDate] = @p0, [Discount] = @p1, [IsActice] = @p2, [Price] = @p3, [ProductCode] = @p4, [ProductDetail] = @p5, [ProductGroupId] = @p6, [PromotionId] = @p7, [Stock] = @p8, [UpdateDate] = @p9
+WHERE [ProductId] = @p10;
+SELECT @@ROWCOUNT;
+2021-02-12 14:33:17.957 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 14:33:17.957 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject) in 13.9785ms
+2021-02-12 14:33:17.957 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:17.957 +07:00 [INF] Request finished in 14.775ms 200 application/json; charset=utf-8
+2021-02-12 14:33:27.780 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:6001/api/product/update application/json 278
+2021-02-12 14:33:27.780 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:27.780 +07:00 [INF] Route matched with {action = "UpdateProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateProduct(DemoStandardProject.DTOs.UpdateProductDto) on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:33:27.782 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:33:27.783 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__updateProduct_ProductId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+WHERE [p].[ProductId] = @__updateProduct_ProductId_0
+2021-02-12 14:33:27.786 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Decimal), @p2='?' (DbType = Boolean), @p3='?' (DbType = Decimal), @p4='?' (Size = 30), @p5='?' (Size = 255), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product] SET [CreatedDate] = @p0, [Discount] = @p1, [IsActice] = @p2, [Price] = @p3, [ProductCode] = @p4, [ProductDetail] = @p5, [ProductGroupId] = @p6, [PromotionId] = @p7, [Stock] = @p8, [UpdateDate] = @p9
+WHERE [ProductId] = @p10;
+SELECT @@ROWCOUNT;
+2021-02-12 14:33:27.791 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 14:33:27.792 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject) in 11.4789ms
+2021-02-12 14:33:27.792 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.UpdateProduct (DemoStandardProject)'
+2021-02-12 14:33:27.792 +07:00 [INF] Request finished in 12.2194ms 200 application/json; charset=utf-8
+2021-02-12 14:34:25.819 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:6001/api/product/all  
+2021-02-12 14:34:25.819 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:34:25.819 +07:00 [INF] Route matched with {action = "GetProductAll", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetProductAll() on controller DemoStandardProject.Controllers.Product.ProductController (DemoStandardProject).
+2021-02-12 14:34:25.820 +07:00 [INF] Entity Framework Core 3.1.9 initialized 'AppDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 14:34:25.823 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ProductId], [p].[CreatedDate], [p].[Discount], [p].[IsActice], [p].[Price], [p].[ProductCode], [p].[ProductDetail], [p].[ProductGroupId], [p].[PromotionId], [p].[Stock], [p].[UpdateDate], [p0].[ProductGroupId], [p0].[CreatedDate], [p0].[IsActice], [p0].[ProductGroupDetail], [p0].[UpdatedDate], [p1].[PromotionId], [p1].[DateFrom], [p1].[Detail], [p1].[Discount], [p1].[IsActice], [p1].[dateTo]
+FROM [Product] AS [p]
+INNER JOIN [ProductGroup] AS [p0] ON [p].[ProductGroupId] = [p0].[ProductGroupId]
+INNER JOIN [Promotions] AS [p1] ON [p].[PromotionId] = [p1].[PromotionId]
+2021-02-12 14:34:25.824 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.Models.ServiceResponse.ServiceResponse`1[[System.Collections.Generic.List`1[[DemoStandardProject.DTOs.ProductDto, DemoStandardProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2021-02-12 14:34:25.825 +07:00 [INF] Executed action DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject) in 5.7619ms
+2021-02-12 14:34:25.825 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.Product.ProductController.GetProductAll (DemoStandardProject)'
+2021-02-12 14:34:25.825 +07:00 [INF] Request finished in 6.5301ms 200 application/json; charset=utf-8

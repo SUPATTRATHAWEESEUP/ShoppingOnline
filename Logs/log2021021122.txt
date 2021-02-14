@@ -1,0 +1,9 @@
+2021-02-11 22:00:09.736 +07:00 [INF] Request starting HTTP/2 GET https://localhost:6001/WeatherForecast  
+2021-02-11 22:00:09.746 +07:00 [INF] Executing endpoint 'DemoStandardProject.Controllers.WeatherForecastController.Get (DemoStandardProject)'
+2021-02-11 22:00:09.776 +07:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[DemoStandardProject.WeatherForecast] Get() on controller DemoStandardProject.Controllers.WeatherForecastController (DemoStandardProject).
+2021-02-11 22:00:09.779 +07:00 [INF] Executing ObjectResult, writing value of type 'DemoStandardProject.WeatherForecast[]'.
+2021-02-11 22:00:09.796 +07:00 [INF] Executed action DemoStandardProject.Controllers.WeatherForecastController.Get (DemoStandardProject) in 16.8344ms
+2021-02-11 22:00:09.797 +07:00 [INF] Executed endpoint 'DemoStandardProject.Controllers.WeatherForecastController.Get (DemoStandardProject)'
+2021-02-11 22:00:09.798 +07:00 [INF] Request finished in 61.9593ms 200 application/json; charset=utf-8
+2021-02-11 22:00:09.841 +07:00 [INF] Request starting HTTP/2 GET https://localhost:6001/favicon.ico  
+2021-02-11 22:00:09.841 +07:00 [INF] Request finished in 0.3361ms 404 
